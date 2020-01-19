@@ -10,6 +10,12 @@
         <div v-else-if="updateProgress">
           <h3>Downloading update</h3>
           <div>{{ updateProgress }}</div>
+          <button @click.prevent="cancel">Cancel</button>
+        </div>
+        <div v-else-if="updateStarted">
+          <h3>Downloading update</h3>
+          <div>...</div>
+          <button @click.prevent="cancel">Cancel</button>
         </div>
         <div v-else>
           <h3>Update available</h3>
@@ -35,6 +41,7 @@
     data () {
       return {
         ready: true,
+        updateStarted: false,
         updateInfo: null,
         updateProgress: null,
         updateError: null,
@@ -60,6 +67,9 @@
       website () {
         shell.openExternal('https://github.com')
         ipcRenderer.send('quit')
+      },
+      cancel () {
+        ipcRenderer.send('update-cancel')
       },
       update () {
         ipcRenderer.send('update-start')
