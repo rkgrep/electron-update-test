@@ -5,6 +5,7 @@
   "private": true,
   "author": "",
   "license": "ISC",
+  "repository": "https://github.com/rkgrep/electron-update-test",
   "main": "./dist/electron/main.js",
   "scripts": {
     "build": "node .electron-vue/build.js && electron-builder",
