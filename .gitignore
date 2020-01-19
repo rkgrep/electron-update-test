@@ -1,0 +1,17 @@
+.DS_Store
+dist/electron/*
+dist/web/*
+build/*
+!build/icons
+!build/license*
+!build/entitlements*
+node_modules/
+npm-debug.log
+npm-debug.log.*
+thumbs.db
+!.gitkeep
+.env
+.env.*
+electron-builder.env
+cert/
+build.json
