@@ -1,6 +1,6 @@
 {
   "name": "electron-experiment",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "private": true,
   "author": "",
@@ -61,6 +61,7 @@
       "allowElevation": false
     },
     "win": {
+      "publisherName": "Red Market LLC",
       "icon": "build/icons/electron_icon.ico"
     },
     "linux": {
