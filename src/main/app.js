@@ -15,9 +15,11 @@ app.on('ready', async () => {
   console.log('App ready')
   createWindow()
   const { default: updater } = require('./updater')
-  await updater.checkForUpdates().catch(e => {
+  try {
+    await updater.checkForUpdates()
+  } catch (e) {
     console.log('Check update error', e)
-  })
+  }
   console.log('All ready')
 })
 
